@@ -72,6 +72,23 @@ committed since it contains no secrets.
    flutter run -d chrome      # or an iOS simulator / Android emulator
    ```
 
+## Deploying the web version to Firebase Hosting
+
+Firebase Hosting is fully available on the free Spark plan (10 GB storage,
+360 MB/day transfer) — no Blaze needed here either. `firebase.json` already
+has a `hosting` block pointing at `build/web` with a catch-all rewrite to
+`index.html` (required since this is a single-page app).
+
+```
+flutter build web --release
+firebase deploy --only hosting
+```
+
+The public web app config baked into the JS bundle (API key, project ID,
+etc.) isn't a secret — see the note in step 4 above — the real protection is
+`firestore.rules`. The site is live at `https://<your-project-id>.web.app`;
+re-run the two commands above any time you want to publish a new version.
+
 ## Notes
 
 - No self-signup — the two accounts are created directly in the Firebase

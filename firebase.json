@@ -1,1 +1,47 @@
-{"firestore":{"rules":"firestore.rules"},"flutter":{"platforms":{"android":{"default":{"projectId":"iamthinkingofyou-70d41","appId":"1:710440004378:android:9b3ea4a7c487bc72bfdaa3","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"iamthinkingofyou-70d41","appId":"1:710440004378:ios:c0a3b17404cebe31bfdaa3","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"dart":{"lib/firebase_options.dart":{"projectId":"iamthinkingofyou-70d41","configurations":{"android":"1:710440004378:android:9b3ea4a7c487bc72bfdaa3","ios":"1:710440004378:ios:c0a3b17404cebe31bfdaa3","web":"1:710440004378:web:10cfb209b0a0e9bfbfdaa3"}}}}}}
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "iamthinkingofyou-70d41",
+          "appId": "1:710440004378:android:9b3ea4a7c487bc72bfdaa3",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "iamthinkingofyou-70d41",
+          "appId": "1:710440004378:ios:c0a3b17404cebe31bfdaa3",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "iamthinkingofyou-70d41",
+          "configurations": {
+            "android": "1:710440004378:android:9b3ea4a7c487bc72bfdaa3",
+            "ios": "1:710440004378:ios:c0a3b17404cebe31bfdaa3",
+            "web": "1:710440004378:web:10cfb209b0a0e9bfbfdaa3"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
