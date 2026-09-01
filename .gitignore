@@ -43,3 +43,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Firebase — project-identifying config, not committed to this public repo.
+# See lib/firebase_options.example.dart and the README setup instructions.
+lib/firebase_options.dart
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+.firebase/
+.firebaserc

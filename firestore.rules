@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /letters/{letterId} {
+      // Fill these in with the two UIDs from Firebase console > Authentication
+      // > Users, after creating the two accounts. See README.md.
+      function isAuthor() {
+        return request.auth != null && request.auth.uid == "bY2PlRf0gRbNpMhkdEVUZQJWTaB3";
+      }
+      function isRecipient() {
+        return request.auth != null && request.auth.uid == "m0m2iypPVgPji7fx2JmzKN37PcB3";
+      }
+
+      // The author can read everything (including future-scheduled letters).
+      // The recipient can only read letters whose visibleAt has passed.
+      allow read: if isAuthor()
+                  || (isRecipient() && resource.data.visibleAt <= request.time);
+
+      allow create, update, delete: if isAuthor();
+    }
+  }
+}
