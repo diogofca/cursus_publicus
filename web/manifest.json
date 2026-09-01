@@ -1,11 +1,11 @@
 {
-    "name": "demo",
-    "short_name": "demo",
+    "name": "Cursus Publicus",
+    "short_name": "Cursus Publicus",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "A private letters app for two.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

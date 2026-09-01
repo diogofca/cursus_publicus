@@ -10,7 +10,7 @@ const kRecipientUid = 'm0m2iypPVgPji7fx2JmzKN37PcB3';
 
 const kLettersCollection = 'letters';
 
-const kAppName = 'Letters';
+const kAppName = 'Cursus Publicus';
 
 /// This app runs on Firebase's free Spark plan — no Cloud Storage (that
 /// requires the paid Blaze plan), so photos are compressed and embedded

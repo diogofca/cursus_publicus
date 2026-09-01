@@ -1,4 +1,4 @@
-# Letters
+# Cursus Publicus
 
 A private letters app for two people. One account writes weekly letters
 (text, a few photos, a Spotify link) and schedules when each becomes
