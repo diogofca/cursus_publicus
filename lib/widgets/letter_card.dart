@@ -77,8 +77,15 @@ class _LetterCardState extends State<LetterCard> {
                           tag: 'letter-${letter.id}',
                           child: Material(
                             color: Colors.transparent,
-                            child: Column(
+                            // Flex (not Column, which doesn't expose
+                            // clipBehavior) hard-clips instead of throwing a
+                            // debug overflow warning when the Hero flight
+                            // briefly squeezes this into a shorter box than
+                            // its natural two-line height.
+                            child: Flex(
+                              direction: Axis.vertical,
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              clipBehavior: Clip.hardEdge,
                               children: [
                                 Text(
                                   letter.title.isEmpty
